@@ -15,6 +15,7 @@ export class Tab2Page {
   public input_arg:any='';
 
   public cho:String='';
+  public chl:String='';
   public chb:String='';
   public dlb:String='';
   constructor(public service:SettingService,private storage: Storage) {}
@@ -29,6 +30,7 @@ export class Tab2Page {
     this.dlb = formatNumber(this.input_arg / this.service.config.arg_dlb,'es-AR','1.2-2');
     this.cho = formatNumber(this.input_arg / this.service.config.arg_dlo * this.service.config.chl_dol,'es-AR','1.2-2');
     this.chb = formatNumber(this.input_arg / this.service.config.arg_dlb * this.service.config.chl_dol,'es-AR','1.2-2');
+    this.chl = formatNumber(this.input_arg / this.service.config.chl * 1000,'es-AR','1.2-2');
 
   }
 

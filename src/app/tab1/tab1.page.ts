@@ -14,6 +14,7 @@ export class Tab1Page {
   public input_chl:any='';
   public aro:String='';
   public arb:String='';
+  public arg:String='';
   public dol:String='';
 
   constructor(public service:SettingService,private storage: Storage) {}
@@ -23,12 +24,9 @@ export class Tab1Page {
     this.changeInput();
     this.service.get();
   }
-  BsGm2486
-  Mauri602
-  BsGm2486
-
   public changeInput(){
     this.arb = formatNumber(this.input_chl * (1/this.service.config.chl_dol) * this.service.config.arg_dlb,'es-AR','1.2-2');
+    this.arg = formatNumber(this.input_chl * (this.service.config.chl/1000),'es-AR','1.2-2');
     this.aro = formatNumber(this.input_chl * (1/this.service.config.chl_dol) * this.service.config.arg_dlo,'es-AR','1.2-2');
     this.dol = formatNumber(this.input_chl * (1/this.service.config.chl_dol),'es-AR','1.2-2');
   }

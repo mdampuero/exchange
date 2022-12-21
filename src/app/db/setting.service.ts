@@ -8,7 +8,8 @@ export class SettingService {
   public config = {
     arg_dlb:320,
     arg_dlo:175,
-    chl_dol:888
+    chl_dol:888,
+    chl: 370
   };
 
   constructor(private storage: Storage) {

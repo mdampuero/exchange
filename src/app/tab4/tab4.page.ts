@@ -15,6 +15,7 @@ export class Tab4Page {
     'arg_dlb':'',
     'arg_dlo':'',
     'chl_dol':'',
+    'chl':''
   };
   constructor(public service:SettingService,private storage: Storage,private toastController: ToastController) { }
 
@@ -27,7 +28,8 @@ export class Tab4Page {
     this.service.save({
       'arg_dlb': this.form.arg_dlb,
       'arg_dlo': this.form.arg_dlo,
-      'chl_dol': this.form.chl_dol
+      'chl_dol': this.form.chl_dol,
+      'chl': this.form.chl
     }).then(async r => {
       const toast = await this.toastController.create({
         message: 'Datos guardados',
