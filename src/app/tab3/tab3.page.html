@@ -1,17 +1,34 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
+    <ion-title size="large">
+      Dólar
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-list class="ion-padding-top">
+    <ion-item >
+      <ion-input type="number" style="text-align: center;font-size: 2rem" class="ion-padding" placeholder="Monto en dólares" [(ngModel)]="input_dol" (ngModelChange)="changeInput()"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Peso ARG al blue</ion-card-subtitle>
+      <ion-card-title>$ {{ arb }}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Peso ARG al official</ion-card-subtitle>
+      <ion-card-title>$ {{ aro }}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Peso CHL</ion-card-subtitle>
+      <ion-card-title>$ {{ chl }}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
 </ion-content>
